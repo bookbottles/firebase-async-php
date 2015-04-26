@@ -1,7 +1,7 @@
 {
-  "name": "ktamas77/firebase-php",
+  "name": "bookbottles/firebase-async-php",
   "description": "Firebase PHP Client",
-  "homepage": "https://github.com/ktamas77/firebase-php",
+  "homepage": "https://github.com/bookbottles/firebase-async-php",
   "keywords": [
     "firebase",
     "REST",
@@ -10,8 +10,8 @@
   "version": "2.0.0",
   "authors": [
     {
-      "name": "Tamas Kalman",
-      "email": "ktamas77@gmail.com"
+      "name": "Anid Monsur",
+      "email": "anid.monsur@bookbottles.com"
     }
   ],
   "license": "MIT",

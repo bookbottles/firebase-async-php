@@ -34,14 +34,14 @@ class FirebaseTest extends \PHPUnit_Framework_TestCase
 
   public function setUp()
   {
-    $this->_firebase = new FirebaseLib(self::DEFAULT_URL, self::DEFAULT_TOKEN);
+    $this->_firebase = new Firebase(self::DEFAULT_URL, self::DEFAULT_TOKEN);
   }
 
   public function testNoBaseURI()
   {
     $errorMessage = null;
     try {
-      new FirebaseLib();
+      new Firebase();
     } catch (Exception $e) {
       $errorMessage = $e->getMessage();
     }

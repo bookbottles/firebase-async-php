@@ -1,60 +1,73 @@
 <?php
-namespace Firebase;
-
-/**
- * Interface FirebaseInterface
- * @package Firebase
- */
-interface FirebaseInterface
-{
-    /**
-     * @param $token
-     * @return mixed
-     */
-    public function setToken($token);
+    namespace Firebase;
 
     /**
-     * @param $baseURI
-     * @return mixed
+     * Interface FirebaseInterface
+     *
+     * @package Firebase
      */
-    public function setBaseURI($baseURI);
+    interface FirebaseInterface
+    {
+        /**
+         * @param $token
+         *
+         * @return mixed
+         */
+        public function setToken($token);
 
-    /**
-     * @param $seconds
-     * @return mixed
-     */
-    public function setTimeOut($seconds);
+        /**
+         * @param $baseURI
+         *
+         * @return mixed
+         */
+        public function setBaseURI($baseURI);
 
-    /**
-     * @param $path
-     * @param $data
-     * @return mixed
-     */
-    public function set($path, $data);
+        /**
+         * @param $seconds
+         *
+         * @return mixed
+         */
+        public function setTimeOut($seconds);
 
-    /**
-     * @param $path
-     * @param $data
-     * @return mixed
-     */
-    public function push($path, $data);
+        /**
+         * @param      $path
+         * @param      $data
+         * @param bool $async
+         *
+         * @return mixed
+         */
+        public function set($path, $data, $async = false);
 
-    /**
-     * @param $path
-     * @param $data
-     * @return mixed
-     */
-    public function update($path, $data);
+        /**
+         * @param      $path
+         * @param      $data
+         * @param bool $async
+         *
+         * @return mixed
+         */
+        public function push($path, $data, $async = false);
 
-    /**
-     * @param $path
-     * @return mixed
-     */
-    public function get($path);
+        /**
+         * @param      $path
+         * @param      $data
+         * @param bool $async
+         *
+         * @return mixed
+         */
+        public function update($path, $data, $async = false);
 
-    /**
-     * @param $path
-     * @return mixed
-     */
-    public function delete($path);
-}
+        /**
+         * @param $path
+         *
+         * @return mixed
+         */
+        public function get($path);
+
+        /**
+         * @param      $path
+         * @param bool $async
+         *
+         * @return mixed
+         */
+        public function delete($path, $async = false);
+    }
